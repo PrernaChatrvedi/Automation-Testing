@@ -1,0 +1,51 @@
+Q1. What are the four access modifiers available in java and what is their significance in terms of class, method, and variable accessibility?
+Ans: 1. Access modifiers help to restrict the scope of a class, constructor, variable, method, or data member.
+2. There are four types of access modifiers available in Java: Default – No keyword required, Private, Protected,Public.
+1. Default Access Modifier :- When no access modifier is specified for a class, method, or data member – I
+t is said to be having the default access modifier by default. The data members, classes, or methods that are not declared using 
+any access modifiers i.e. having default access modifiers are accessible only within the same package
+2. Private Access Modifier :- The private access modifier is specified using the keyword private. 
+The methods or data members declared as private are accessible only within the class in which they are declared.
+Any other class of the same package will not be able to access these members.
+3. Protected Access Modifier :- The protected access modifier is specified using the keyword protected.
+The methods or data members declared as protected are accessible within the same package or subclasses in different packages.
+4. Public Access modifier :- The public access modifier is specified using the keyword public. 
+The public access modifier has the widest scope among all other access modifiers.
+Classes, methods, or data members that are declared as public are accessible from everywhere in the program. There is no restriction on the scope of public data members.
+
+Q2. What is the difference between Exception and error?
+Ans : The general meaning of exception is a deliberate act of omission while the meaning of error is an action that is inaccurate or incorrect. 
+In Java, Exception, and Error both are subclasses of the Java Throwable class that belongs to java.lang package. 
+But there exist some significant differences between them. So, in this section, we are going to discuss the key differences between exception and error.
+Basis of Comparison between Exception and Error.
+Recoverable/ Irrecoverable	Exception can be recovered by using the try-catch block. An error cannot be recovered.
+Type	It can be classified into two categories i.e. checked and unchecked.	All errors in Java are unchecked.
+Occurrence	It occurs at compile time or run time.	It occurs at run time.
+Package	It belongs to java.lang.Exception package.	It belongs to java.lang.Error package.
+Known or unknown	Only checked exceptions are known to the compiler.	Errors will not be known to the compiler.
+Causes	It is mainly caused by the application itself.	It is mostly caused by the environment in which the application is running.
+Example	Checked Exceptions: SQLException, IOException
+Unchecked Exceptions: ArrayIndexOutOfBoundException, NullPointerException, ArithmaticException	Java.lang.StackOverFlow, java.lang.OutOfMemoryError
+
+Q3. What is the difference between checked Exception and unchecked Exception?
+Ans: In Java, Exception is an unwanted or unexpected event, which occurs during the execution of a program, 
+i.e. at run time, that disrupts the normal flow of the program’s instructions. 
+In Java, there are two types of exceptions:
+Checked exceptions
+Unchecked exceptions
+Checked Exceptions in Java
+These are the exceptions that are checked at compile time. If some code within a method throws a checked exception, 
+then the method must either handle the exception or it must specify the exception using the throws keyword. 
+In checked exceptions, there are two types: fully checked and partially checked exceptions. 
+A fully checked exception is a checked exception where all its child classes are also checked, like IOException, and InterruptedException. 
+A partially checked exception is a checked exception where some of its child classes are unchecked, like an Exception.
+Unchecked Exceptions in Java
+These are the exceptions that are not checked at compile time. 
+In C++, all exceptions are unchecked, so it is not forced by the compiler’s to either handle or specify the exception. 
+It is up to the programmers to be civilized and specify or catch the exceptions. In Java, 
+exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked. 
+
+
+
+
+
